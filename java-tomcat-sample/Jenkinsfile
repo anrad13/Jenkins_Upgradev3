@@ -4,8 +4,8 @@ pipeline {
         stage('Build Application') {
             steps {
                // sh 'mvn -f java-tomcat-sample/pom.xml clean package'
-               bat 'echo Try to execute mvn'
-               bat 'mvn -f java-tomcat-sample/pom.xml clean package'
+               cmd_exec('echo Try to execute mvn')
+               //bat 'mvn -f java-tomcat-sample/pom.xml clean package'
             }
             post {
                 success {
